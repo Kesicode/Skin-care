@@ -1,0 +1,60 @@
+{
+  "project_name": "DermaAI",
+  "phase": "Phase 17 — Final Research Documentation",
+  "final_model": "Experiment 14 Probability Ensemble",
+  "experiment8_checkpoint": "ai/models/experiment8_best_model.pt",
+  "experiment13_checkpoint": "ai/models/experiment13_best_model.pt",
+  "ensemble_weights": {
+    "experiment8": 0.85,
+    "experiment13": 0.15,
+    "formula": "P_final = 0.85 * P8 + 0.15 * P13"
+  },
+  "decision_rule": "argmax",
+  "experiment15_status": "Threshold theta*=0.50 confirmed zero changed predictions relative to argmax",
+  "input_size": [224, 224],
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "dataset_split": {
+    "dataset": "HAM10000",
+    "train_images": 8017,
+    "validation_images": 1010,
+    "test_images": 988,
+    "total_images": 10015,
+    "seed": 42,
+    "split_strategy": "lesion_level"
+  },
+  "final_metrics": {
+    "population": "Held-Out Test Split (N=988)",
+    "accuracy": 0.805668016194332,
+    "balanced_accuracy": 0.7569151480634072,
+    "macro_f1": 0.7051135970979019,
+    "weighted_f1": 0.8105645428053212,
+    "melanoma_precision": 0.54,
+    "melanoma_recall": 0.5094339622641509,
+    "melanoma_f1": 0.5242718446601942
+  },
+  "phase16_validation_population": {
+    "population": "Validation Split (N=1010)",
+    "correct_predictions": 804,
+    "total_errors": 206,
+    "melanoma_support": 117,
+    "melanoma_detected": 75,
+    "melanoma_recall": 0.6410256410256411,
+    "mel_to_nv_errors": 24,
+    "mel_to_bkl_errors": 9,
+    "nv_to_mel_false_positives": 39,
+    "exp8_vs_exp13_disagreements": 85
+  },
+  "disclaimer_present": true,
+  "experimentation_complete": true,
+  "model_frozen": true,
+  "documentation_complete": true,
+  "clinical_diagnostic_device": false
+}

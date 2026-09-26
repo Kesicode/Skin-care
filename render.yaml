@@ -1,0 +1,35 @@
+# Render Blueprint for DermaAI
+# Deploys FastAPI backend and Next.js frontend
+services:
+  # 1. FastAPI Inference Backend
+  - type: web
+    name: dermaai-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: standard
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: DERMAAI_DEVICE
+        value: cpu
+      - key: DERMAAI_ALLOWED_ORIGINS
+        value: "*"
+
+  # 2. Next.js Frontend
+  - type: web
+    name: dermaai-frontend
+    env: node
+    plan: starter
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: dermaai-backend
+          property: host

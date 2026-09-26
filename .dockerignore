@@ -1,0 +1,26 @@
+# Ignore dataset and caches
+ai/dataset/
+ai/data/
+ai/.venv/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js artifacts
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Git and OS metadata
+.git/
+.gitignore
+.DS_Store
+Thumbs.db
+.cursor/
+.gemini/

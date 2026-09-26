@@ -1,0 +1,5 @@
+Model,Role,Accuracy,Balanced_Accuracy,Macro_F1,Weighted_F1,Melanoma_Recall,Melanoma_Precision,Melanoma_F1
+Experiment 8 (Tempered alpha=0.75),Precision-anchored base model,80.67,75.37,70.18,81.07,48.11,56.04,51.78
+Experiment 13 (Targeted 1.20x Mel),Sensitivity-enhanced complement,78.04,73.14,67.58,78.92,59.43,45.32,51.43
+Experiment 14 (Ensemble 85/15),Final frozen probability ensemble,80.57,75.69,70.51,81.06,50.94,54.0,52.43
+Experiment 15 (Threshold Verification),Threshold-tuned ensemble audit,80.57,75.69,70.51,81.06,50.94,54.0,52.43

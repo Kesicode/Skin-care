@@ -1,0 +1,101 @@
+{
+  "project_name": "DermaAI",
+  "version": "1.0.0",
+  "phase": 19,
+  "status": "PHASE 19 COMPLETE - HACKATHON & DEPLOYMENT READY",
+  "frozen_research_pipeline": {
+    "zero_retraining": true,
+    "zero_parameter_updates": true,
+    "architecture": "DermaAI_MobileNetV3",
+    "backbone": "MobileNetV3-Large",
+    "attention_module": "CBAM",
+    "input_resolution": [224, 224],
+    "number_of_classes": 7,
+    "classes": [
+      {"index": 0, "code": "akiec", "name": "Actinic Keratosis / Intraepithelial Carcinoma"},
+      {"index": 1, "code": "bcc", "name": "Basal Cell Carcinoma"},
+      {"index": 2, "code": "bkl", "name": "Benign Keratosis (Solar Lentigo / Seborrheic Keratosis)"},
+      {"index": 3, "code": "df", "name": "Dermatofibroma"},
+      {"index": 4, "code": "mel", "name": "Melanoma"},
+      {"index": 5, "code": "nv", "name": "Melanocytic Nevus"},
+      {"index": 6, "code": "vasc", "name": "Vascular Lesion"}
+    ]
+  },
+  "models": {
+    "experiment8": {
+      "path": "ai/models/experiment8_best_model.pt",
+      "size_bytes": 17512600,
+      "sha256": "ccc579cb2087545fa1118b7551015bec17c0682ec04066268d3a46aa5d23be2c",
+      "parameters": 4326297,
+      "trainable_parameters": 0,
+      "weight_in_ensemble": 0.85
+    },
+    "experiment13": {
+      "path": "ai/models/experiment13_best_model.pt",
+      "size_bytes": 17512921,
+      "sha256": "9fab1b1218fddc86e060f322506bafa691429ef2620d7ff1c26041dc7b52ef21",
+      "parameters": 4326297,
+      "trainable_parameters": 0,
+      "weight_in_ensemble": 0.15
+    }
+  },
+  "ensemble_specification": {
+    "formula": "P_final = 0.85 * P8 + 0.15 * P13",
+    "decision_rule": "argmax",
+    "experiment15_verification": "Grid search over theta in [0.05, 0.95] on validation set confirmed optimal theta*=0.50, which produces 0 changed predictions on 988 test images compared to argmax."
+  },
+  "frozen_test_benchmark": {
+    "test_cohort_size": 988,
+    "metrics": {
+      "accuracy": 0.8057,
+      "balanced_accuracy": 0.7569,
+      "macro_f1": 0.7051,
+      "weighted_f1": 0.8106,
+      "melanoma_recall": 0.5094,
+      "melanoma_precision": 0.5400,
+      "melanoma_f1": 0.5243
+    }
+  },
+  "population_isolation": {
+    "test_set_samples": 988,
+    "validation_set_samples": 1010,
+    "status": "STRICTLY ISOLATED"
+  },
+  "explainability": {
+    "method": "Grad-CAM",
+    "target_layer": "model.attention",
+    "feature_dimensions": [1, 960, 7, 7],
+    "dual_model_comparison": true
+  },
+  "deployment_artifacts": {
+    "backend_dockerfile": "backend/Dockerfile",
+    "root_dockerfile": "Dockerfile",
+    "dockerignore": ".dockerignore",
+    "render_blueprint": "render.yaml",
+    "vercel_config": "vercel.json",
+    "deployment_guide": "DEPLOYMENT_GUIDE.md",
+    "system_architecture": "SYSTEM_ARCHITECTURE.md",
+    "hackathon_demo_script": "HACKATHON_DEMO_SCRIPT.md",
+    "hackathon_slide_outline": "HACKATHON_SLIDE_OUTLINE.md",
+    "final_demo_checklist": "FINAL_DEMO_CHECKLIST.md"
+  },
+  "verification_suites": [
+    {
+      "script": "smoke_test_dermaai.py",
+      "description": "Fast in-memory synthetic smoke tests (7/7 pass)"
+    },
+    {
+      "script": "verify_production_dermaai.py",
+      "description": "Comprehensive production readiness & contract verification (7/7 pass)"
+    },
+    {
+      "script": "verify_dermaai_demo.py",
+      "description": "Phase 18 demo acceptance suite (13/13 pass)"
+    },
+    {
+      "script": "backend/test_demo.py",
+      "description": "FastAPI unit test suite (9/9 pass)"
+    }
+  ],
+  "disclaimer": "RESEARCH USE ONLY: This system is an academic research demonstrator for image-level classification of dermoscopic images on the retrospective HAM10000 dataset. It is NOT a certified medical diagnostic device, has NOT undergone clinical trial evaluation, and must NEVER be used as a substitute for professional clinical diagnosis, biopsy, dermoscopic examination, or physician decision-making in patient care."
+}

@@ -1,0 +1,8 @@
+class_code,class_name,support,correct,precision,recall,f1
+akiec,Actinic Keratosis,33,31,51.67,93.94,66.67
+bcc,Basal Cell Carcinoma,49,42,72.41,85.71,78.5
+bkl,Benign Keratosis,101,67,55.83,66.34,60.63
+df,Dermatofibroma,15,8,72.73,53.33,61.54
+mel,Melanoma,106,54,54.0,50.94,52.43
+nv,Melanocytic Nevus,670,581,93.41,86.72,89.94
+vasc,Vascular Lesion,14,13,76.47,92.86,83.87

@@ -1,0 +1,5 @@
+Model,Melanoma_Support,Melanoma_Detected,Melanoma_Recall,Melanoma_Precision,Melanoma_F1,False_Negatives,Missed_as_NV,Missed_as_BKL
+Experiment 1 (Baseline),106,48,45.28,36.92,40.68,58,35,18
+Experiment 8 (Tempered),106,51,48.11,56.04,51.78,55,28,21
+Experiment 13 (Mel-Focused),106,63,59.43,45.32,51.43,43,21,16
+Experiment 14 (Final Ensemble),106,54,50.94,54.0,52.43,52,26,19

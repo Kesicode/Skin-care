@@ -63,7 +63,8 @@ next-env.d.ts
 /ai/models/synthetic_smoke_test/
 
 # Results & Visualizations
-/ai/results/
+/ai/results/*
+!/ai/results/phase17_final_documentation/
 
 # Python Cache
 __pycache__/

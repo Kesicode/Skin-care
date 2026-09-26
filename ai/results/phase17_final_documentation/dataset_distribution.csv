@@ -1,0 +1,9 @@
+class_code,class_name,train_count,train_pct,val_count,val_pct,test_count,test_pct,total_count,total_pct
+akiec,Actinic Keratosis,257,3.21,37,3.66,33,3.34,327,3.27
+bcc,Basal Cell Carcinoma,412,5.14,53,5.25,49,4.96,514,5.13
+bkl,Benign Keratosis,891,11.11,107,10.59,101,10.22,1099,10.97
+df,Dermatofibroma,86,1.07,14,1.39,15,1.52,115,1.15
+mel,Melanoma,890,11.1,117,11.58,106,10.73,1113,11.11
+nv,Melanocytic Nevus,5367,66.95,668,66.14,670,67.81,6705,66.95
+vasc,Vascular Lesion,114,1.42,14,1.39,14,1.42,142,1.42
+TOTAL,All Classes,8017,100.0,1010,100.0,988,100.0,10015,100.0

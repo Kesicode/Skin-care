@@ -1,0 +1,16 @@
+Experiment,Configuration,Input,Accuracy,Balanced_Accuracy,Macro_F1,Weighted_F1,Melanoma_Precision,Melanoma_Recall,Melanoma_F1
+Exp 1,"Baseline MobileNetV3-Large, unweighted CE",224x224,73.18,73.07,63.95,74.87,36.92,45.28,40.68
+Exp 2,Inverse frequency class weighting,224x224,78.95,75.1,68.18,79.83,47.97,55.66,51.53
+Exp 3,Effective number of samples weighting (beta=0.9999),224x224,76.82,75.67,67.04,78.05,45.53,52.83,48.91
+Exp 4,Heavy augmentation (Mixup + CutMix),224x224,70.24,67.3,55.99,72.19,35.85,35.85,35.85
+Exp 5,AutoAugment / RandAugment policy,224x224,69.64,64.99,52.24,71.58,34.41,30.19,32.16
+Exp 6,CBAM attention block integration,224x224,71.76,72.66,60.76,73.89,40.14,55.66,46.64
+Exp 7,Gradual unfreezing fine-tuning (backbone stages),224x224,77.23,73.82,66.66,78.38,42.65,54.72,47.93
+Exp 8,Tempered class weighting (alpha=0.75) + CBAM,224x224,80.67,75.37,70.18,81.07,56.04,48.11,51.78
+Exp 9,Label smoothing regularization (eps=0.10),224x224,77.73,77.25,65.9,78.87,48.31,53.77,50.89
+Exp 10,Post-hoc decision threshold tuning on Exp 8 (theta=0.28),224x224,80.26,75.51,70.23,80.76,53.54,50.0,51.71
+Exp 11,Deterministic Test-Time Augmentation (TTA) on Exp 8,224x224,79.76,70.69,66.22,80.05,58.02,44.34,50.27
+Exp 12,Controlled input resolution experiment (256x256),256x256,78.85,72.73,68.45,79.47,47.83,51.89,49.77
+Exp 13,Targeted 1.20x melanoma weight (tempered alpha=0.75),224x224,78.04,73.14,67.58,78.92,45.32,59.43,51.43
+Exp 14,Validation-calibrated probability ensemble (0.85 Exp8 + 0.15 Exp13),224x224,80.57,75.69,70.51,81.06,54.0,50.94,52.43
+Exp 15,"Validation-calibrated threshold on Exp14 ensemble (theta=0.50, 0 changes)",224x224,80.57,75.69,70.51,81.06,54.0,50.94,52.43

@@ -1,0 +1,68 @@
+{
+  "project": "DermaAI",
+  "version": "1.0.0",
+  "phase": "Phase 18 — Demo Engineering",
+  "status": "demo_engineering",
+  "research_experiments_frozen": true,
+  "training_permitted": false,
+  "models": {
+    "experiment8": {
+      "checkpoint": "ai/models/experiment8_best_model.pt",
+      "architecture": "DermaAI_MobileNetV3",
+      "backbone": "MobileNetV3-Large",
+      "attention": "CBAM",
+      "parameters": 4326297,
+      "sha256": "ccc579cb2087545fa1118b7551015bec17c0682ec04066268d3a46aa5d23be2c",
+      "filesize_bytes": 17512600,
+      "role": "Precision-anchored base model (tempered class weighting alpha=0.75)"
+    },
+    "experiment13": {
+      "checkpoint": "ai/models/experiment13_best_model.pt",
+      "architecture": "DermaAI_MobileNetV3",
+      "backbone": "MobileNetV3-Large",
+      "attention": "CBAM",
+      "parameters": 4326297,
+      "sha256": "9fab1b1218fddc86e060f322506bafa691429ef2620d7ff1c26041dc7b52ef21",
+      "filesize_bytes": 17512921,
+      "role": "Sensitivity-enhanced complement model (1.20x targeted melanoma weight)"
+    }
+  },
+  "ensemble": {
+    "experiment8": 0.85,
+    "experiment13": 0.15,
+    "formula": "P_final = 0.85 * P8 + 0.15 * P13"
+  },
+  "decision_rule": "argmax",
+  "experiment15_verification": "theta* = 0.50 confirmed zero changed predictions relative to argmax",
+  "input_size": [224, 224],
+  "num_classes": 7,
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "gradcam": {
+    "enabled": true,
+    "target_layer": "model.attention",
+    "feature_shape": [1, 960, 7, 7],
+    "target_class": "ensemble_predicted_class",
+    "interpretability_notice": "Grad-CAM is an interpretability aid, not proof of clinical reasoning or causality."
+  },
+  "clinical_diagnostic_system": false,
+  "benchmark_is_clinical_accuracy": false,
+  "benchmark_metrics": {
+    "population": "HAM10000 held-out test split (N=988)",
+    "accuracy": 0.8057,
+    "balanced_accuracy": 0.7569,
+    "macro_f1": 0.7051,
+    "weighted_f1": 0.8106,
+    "melanoma_recall": 0.5094,
+    "melanoma_precision": 0.5400,
+    "melanoma_f1": 0.5243
+  },
+  "disclaimer": "RESEARCH USE ONLY: This system is an academic research demonstrator for image-level classification of dermoscopic images on the retrospective HAM10000 dataset. It is not a certified medical diagnostic device."
+}
