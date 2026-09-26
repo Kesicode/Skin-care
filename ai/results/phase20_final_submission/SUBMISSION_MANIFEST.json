@@ -1,0 +1,53 @@
+{
+  "project_name": "DermaAI",
+  "phase": 20,
+  "project_status": "PHASE 20 COMPLETE - HACKATHON SUBMISSION READY",
+  "final_model": {
+    "name": "DermaAI_MobileNetV3_Ensemble",
+    "backbone": "MobileNetV3-Large",
+    "attention": "CBAM",
+    "parameters_per_model": 4326297,
+    "model_frozen": true,
+    "zero_retraining": true
+  },
+  "ensemble_formula": "P_final = 0.85 P8 + 0.15 P13",
+  "decision_rule": "argmax(P_final)",
+  "component_checkpoints": {
+    "experiment8": {
+      "path": "ai/models/experiment8_best_model.pt",
+      "sha256": "ccc579cb2087545fa1118b7551015bec17c0682ec04066268d3a46aa5d23be2c",
+      "weight": 0.85
+    },
+    "experiment13": {
+      "path": "ai/models/experiment13_best_model.pt",
+      "sha256": "9fab1b1218fddc86e060f322506bafa691429ef2620d7ff1c26041dc7b52ef21",
+      "weight": 0.15
+    }
+  },
+  "final_metrics": {
+    "accuracy": "80.57%",
+    "balanced_accuracy": "75.69%",
+    "macro_f1": "70.51%",
+    "weighted_f1": "81.06%",
+    "melanoma_precision": "54.0%",
+    "melanoma_recall": "50.94%",
+    "melanoma_f1": "52.43%"
+  },
+  "benchmark_population": "N=988 project HAM10000 held-out test split",
+  "validation_population": "N=1010 validation split (Phase 16 error & Grad-CAM analysis)",
+  "presentation_files": {
+    "powerpoint": "ai/results/phase20_final_submission/HACKATHON_FINAL_PPT.pptx",
+    "pitch_script": "ai/results/phase20_final_submission/FINAL_PITCH_SCRIPT.md",
+    "qa_defense": "ai/results/phase20_final_submission/FINAL_QA.md",
+    "project_summary": "ai/results/phase20_final_submission/FINAL_PROJECT_SUMMARY.md",
+    "submission_checklist": "ai/results/phase20_final_submission/FINAL_SUBMISSION_CHECKLIST.md",
+    "demo_runbook": "ai/results/phase20_final_submission/DEMO_RUNBOOK.md"
+  },
+  "poster": "ai/results/phase20_final_submission/DERMAAI_POSTER.pdf",
+  "demo_video": "ai/results/phase20_final_submission/DERMAAI_DEMO_VIDEO.mp4 (Prepared / Placeholder)",
+  "website": "http://localhost:3000",
+  "github": "https://github.com/Kesicode/Skin-care",
+  "research_only": true,
+  "submission_ready": true,
+  "disclaimer": "RESEARCH USE ONLY: This system is an academic research demonstrator for image-level classification of dermoscopic images on the retrospective HAM10000 dataset. It is NOT a certified medical diagnostic device, has NOT undergone clinical trial evaluation, and must NEVER be used as a substitute for professional clinical diagnosis, biopsy, dermoscopic examination, or physician decision-making in patient care."
+}
