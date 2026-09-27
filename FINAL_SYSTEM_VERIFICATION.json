@@ -1,0 +1,739 @@
+{
+  "report": "DERMAAI_FINAL_SYSTEM_VERIFICATION",
+  "generated_at": "2026-09-27T06:14:56Z",
+  "overall": "FAIL",
+  "summary": {
+    "pass": 120,
+    "fail": 1,
+    "skip": 0,
+    "total": 121
+  },
+  "checks": [
+    {
+      "section": 1,
+      "title": "Working tree clean",
+      "status": "FAIL",
+      "detail": "Modified:\n?? FINAL_SYSTEM_VERIFICATION.json\n?? FINAL_SYSTEM_VERIFICATION_REPORT.md\n?? final_system_verification.py"
+    },
+    {
+      "section": 1,
+      "title": "Latest commit",
+      "status": "PASS",
+      "detail": "0e29530 feat(dermaai): complete phase 20 - final hackathon submission package and presentation materials"
+    },
+    {
+      "section": 1,
+      "title": "Remote -> GitHub",
+      "status": "PASS",
+      "detail": "origin\thttps://github.com/Kesicode/Skin-care.git (fetch)"
+    },
+    {
+      "section": 2,
+      "title": ".gitignore exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": "*.pt or models/ ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": "node_modules ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": ".next build ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": "__pycache__ ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": "phase17 results allowed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 2,
+      "title": "phase20 results allowed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 3,
+      "title": "Exp8 checkpoint exists",
+      "status": "PASS",
+      "detail": "17,512,600 bytes"
+    },
+    {
+      "section": 3,
+      "title": "Exp13 checkpoint exists",
+      "status": "PASS",
+      "detail": "17,512,921 bytes"
+    },
+    {
+      "section": 4,
+      "title": "Exp8 SHA-256 matches spec",
+      "status": "PASS",
+      "detail": "ccc579cb2087545fa1118b75..."
+    },
+    {
+      "section": 4,
+      "title": "Exp13 SHA-256 matches spec",
+      "status": "PASS",
+      "detail": "9fab1b1218fddc86e060f322..."
+    },
+    {
+      "section": 5,
+      "title": "Exp8 size matches spec",
+      "status": "PASS",
+      "detail": "17,512,600 bytes"
+    },
+    {
+      "section": 5,
+      "title": "Exp13 size matches spec",
+      "status": "PASS",
+      "detail": "17,512,921 bytes"
+    },
+    {
+      "section": 6,
+      "title": "DermaAI_MobileNetV3 importable from ai.src.model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 7,
+      "title": "Exp8 param count = 4,326,297",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 8,
+      "title": "Exp13 param count = 4,326,297",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 9,
+      "title": "Exp8 loads without error",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 10,
+      "title": "Exp13 loads without error",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 11,
+      "title": "Exp8 in eval() mode",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 11,
+      "title": "Exp8 all params frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 12,
+      "title": "Exp13 in eval() mode",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 12,
+      "title": "Exp13 all params frozen",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 13,
+      "title": "Exp8 has model.attention (CBAM)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 14,
+      "title": "Exp13 has model.attention (CBAM)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 15,
+      "title": "Exp8 output shape=(1,7)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 16,
+      "title": "Exp13 output shape=(1,7)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 17,
+      "title": "shape=[1,3,224,224]",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 18,
+      "title": "Normalized range [2.249,2.640] (expected normalized values)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 19,
+      "title": "Exp8 softmax sum=1.00000000",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 20,
+      "title": "Exp13 softmax sum=1.00000000",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 21,
+      "title": "Ensemble formula correctly applied",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 21,
+      "title": "Weights sum=1.0000000000 (=1.0 exactly)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 22,
+      "title": "Ensemble sum=1.00000012",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 23,
+      "title": "Argmax->class 5 (nv), conf=0.2402",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 24,
+      "title": "EXP8_WEIGHT = 0.85 in config.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 24,
+      "title": "EXP13_WEIGHT = 0.15 in config.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 24,
+      "title": "inference.py uses weight constants from config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 25,
+      "title": "Exp8 hooks fire, heatmap=(7,7)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 26,
+      "title": "Exp13 hooks fire, heatmap=(7,7)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 27,
+      "title": "model.attention shape=(1, 960, 7, 7)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 28,
+      "title": "Range=[0.0000,1.0000] in [0,1]",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 29,
+      "title": "Valid base64 PNG (200x200)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 30,
+      "title": "Two identical runs produce identical output",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 31,
+      "title": "CLASSES has 7 entries",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 31,
+      "title": "All indices 0-6 in order",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 31,
+      "title": "CLASS_CODES=['akiec', 'bcc', 'bkl', 'df', 'mel', 'nv', 'vasc']",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "akiec: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "bcc: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "bkl: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "df: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "mel: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "nv: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 32,
+      "title": "vasc: OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 33,
+      "title": "EXP8_WEIGHT=0.85",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 33,
+      "title": "EXP13_WEIGHT=0.15",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 34,
+      "title": "Exp8 SHA-256 constant correct",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 34,
+      "title": "Exp13 SHA-256 constant correct",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 35,
+      "title": "EXPECTED_PARAMS_COUNT=4,326,297",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 36,
+      "title": "Notice contains 'RESEARCH USE ONLY'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 36,
+      "title": "Notice contains 'academic'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 36,
+      "title": "Notice contains 'NOT a certified medical diagnostic'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 36,
+      "title": "Notice contains 'substitute'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 37,
+      "title": "Exp15 note in inference.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 37,
+      "title": "Exp15 note in schemas.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 38,
+      "title": "config imports OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 38,
+      "title": "schemas imports OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 38,
+      "title": "utils imports OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 38,
+      "title": "preprocessing imports OK",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 39,
+      "title": "app is FastAPI instance",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 39,
+      "title": "Routes: ['/openapi.json', '/docs', '/docs/oauth2-redirect', '/redoc', '/api/health', '/api/models/info', '/api/model-info', '/api/predict']",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 40,
+      "title": "status=200, models_loaded=True",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 40,
+      "title": "status=\"ok\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 40,
+      "title": "ensemble.experiment8_weight=0.85",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "status=200",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  architecture=DermaAI_MobileNetV3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  backbone=MobileNetV3-Large",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  attention=CBAM",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  num_classes=7",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  parameters_per_model=4326297",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "  decision_rule=argmax",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 41,
+      "title": "classes=['akiec', 'bcc', 'bkl', 'df', 'mel', 'nv', 'vasc']",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 42,
+      "title": "Alias returns 200",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 43,
+      "title": "Returns 200 for valid JPEG",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 44,
+      "title": "Rejects text/plain with 400",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'success' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'prediction' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'confidence' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'probabilities' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'top3' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'ensemble' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'gradcam' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 45,
+      "title": "'research_notice' present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 46,
+      "title": "probabilities dict has 7 entries",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 46,
+      "title": "sum=1.00000005~1.0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 46,
+      "title": "All 7 class codes present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 47,
+      "title": "Notice contains 'RESEARCH USE ONLY'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 47,
+      "title": "Notice contains 'academic'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 47,
+      "title": "Notice contains 'NOT a certified medical diagnostic'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 47,
+      "title": "Notice contains 'substitute'",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 48,
+      "title": "gradcam.available=True",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 48,
+      "title": "target_layer=\"model.attention\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 48,
+      "title": "gradcam.experiment8 is valid base64 PNG",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 48,
+      "title": "gradcam.experiment13 is valid base64 PNG",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 49,
+      "title": "No training-set references in inference/service/main",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 50,
+      "title": "No test-split references in demo/inference code",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 51,
+      "title": ".next/ exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 51,
+      "title": "BUILD_ID=tazf8XwIcqcVxxUsgzHsc",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 51,
+      "title": ".next/static/ exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 52,
+      "title": "src\\app\\page.tsx (39,056 bytes)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 52,
+      "title": "src\\app\\api\\predict\\route.ts (1,006 bytes)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 52,
+      "title": "src\\app\\api\\health\\route.ts (693 bytes)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 52,
+      "title": "src\\app\\layout.tsx (1,057 bytes)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "scripts.dev=\"next dev\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "scripts.build=\"next build\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "scripts.start=\"next start\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "\"next\"=\"16.3.5\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "\"react\"=\"19.2.8\"",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "section": 53,
+      "title": "\"react-dom\"=\"19.2.8\"",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}
